@@ -66,4 +66,4 @@ names(mergedData) <- colVariableNames
 subjectActivityMeans <- mergedData %>% group_by(activity, subject) %>% summarise_all(mean)
 
 #write this tidy data to file
-write.table(subjectActivityMeans, file = "tidy_data.txt", sep = " ", quote = FALSE)
+write.table(subjectActivityMeans, file = "tidy_data.txt", sep = " ", quote = FALSE, row.names = FALSE)
